@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Registration</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .warning-message {
+            display: none;
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .success-icon {
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEhio8-ljlVHA/company-logo_200_200/company-logo_200_200/0/1682101283352/jpdhub_logo?e=2147483647&v=beta&t=P37fifZLHuwuqVTIAPomDO7w_H8_ufgYSjnjv2Cl8qU" alt="JPD Hub Logo" class="logo">
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+    <h1>Register Talent</h1>
+    <form id="talent-registration-form">
+        <label for="name">Name: <span style="color: red;">*</span></label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email: <span style="color: red;">*</span></label>
+        <input type="email" id="email" name="email" required>
+        <label for="skills">Skills: <span style="color: red;">*</span></label>
+        <input type="text" id="skills" name="skills" required>
+        <label for="resume">Upload Resume (Max 100MB):</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.txt,.png,.jpg">
+        <button type="button" id="register-btn">Register</button>
+    </form>
+
+    <p class="success-message" id="success-message">
+        <span class="success-icon">&#10004;</span> Registration successful!
+    </p>
+    <p class="warning-message" id="warning-message">
+        Please fill in all the fields marked with <span style="color: red;">*</span> before submitting. 
+    </p>
+    <p><span style="color: red;">*</span> fields are mandatory.</p>
+
+    <script>
+        document.getElementById("register-btn").addEventListener("click", function () {
+            // Get form fields
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const skills = document.getElementById("skills").value.trim();
+            const resume = document.getElementById("resume").files.length;
+
+            // Success and warning messages
+            const successMessage = document.getElementById("success-message");
+            const warningMessage = document.getElementById("warning-message");
+
+            // Clear previous messages
+            successMessage.style.display = "none";
+            warningMessage.style.display = "none";
+
+            // Validate form fields
+            if (name && email && skills && resume > 0) {
+                successMessage.style.display = "block";
+
+                // Redirect to home page after 2 seconds
+                setTimeout(() => {
+                    window.location.href = "/home";
+                }, 2000);
+            } else {
+                warningMessage.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
