@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterButton = document.getElementById('filter-button');
 
     // Event Listener: Form Submission
-    if (registrationForm) {
+    /*if (registrationForm) {
         registrationForm.addEventListener('submit', function (event) {
             event.preventDefault();
             const formData = new FormData(registrationForm);
             submitRegistration(formData);
         });
-    }
+    }*/
 
     // Event Listener: Hire Request Buttons
     if (hireRequestButtons) {
