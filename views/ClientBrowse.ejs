@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Talents</title>
+    <link rel="stylesheet" href="/assets/css/ClientBrowse.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Browse <span id="talent-heading">Talents</span></h1>
+        <!--<label for="dropdown">Search by  </label>
+            <select id="dropdown">
+        <option value="option1">skill</option>
+        <option value="option2">name</option>
+        <option value="option3">language</option>
+</select>-->
+<a href="/client/register" class="top-right-button">Register</a>
+
+    </div>
+
+    <div class="talents-container">
+        <% result.forEach(talent => { %>
+            <div class="talent">
+                <h3><%= talent.Name %></h3>
+                <span><%= talent.Phone %></span><br>
+                <span><%= talent.Email %></span><br>
+                <span><%= talent.Skills %></span><br>
+            </div>
+        <% }) %>
+    </div>
+
+    <script src="/assets/js/scripts.js"></script>
+</body>
+</html>

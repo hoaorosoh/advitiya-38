@@ -1,3 +1,6 @@
 # advitiya-38
 
-talent module project for the advitiya hackathon
+hello sharks!!
+today i present you a project that is more complete than copied from chatgpt
+
+Here is a flow 
