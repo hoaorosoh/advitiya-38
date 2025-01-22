@@ -130,3 +130,16 @@
 .top-right-button:hover {
     background-color: #218838;
 }
+
+.talents-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+#talent-heading {
+    color: #4cae4c;
+}
