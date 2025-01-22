@@ -1,6 +1,17 @@
 # advitiya-38
+<hr>
+HaIII sharks!! ^-^
 
-hello sharks!!
-today i present you a project that is more complete than copied from chatgpt
+This is our (data-38's) submission for the adivitiya hackathon.
+It is a **Talent Module** for JPD Hub
+<hr>
+### It has the following features-
+- Talent Registration
+- Browsing Talent
+- Client Registration
 
-Here is a flow 
+**NOTE-** You will have to change the mysql user, password, and database.
+
+We hope youll like our submission
+<hr>
+Goodbai >.<
