@@ -6,11 +6,12 @@
   }
   
 
+
   
   body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 10%;
+    padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color var(--transition-duration), color var(--transition-duration);
@@ -58,7 +59,7 @@
       background: #4a5d6a;
   }
   
-  input[type="text"], input[type="email"], input[type=number], textarea {
+  input[type="text"], input[type="email"], textarea {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
@@ -113,20 +114,19 @@
       }
   }
 
-  #form-container
-  {
-    padding: 0 25%;
-
-  }
-  
-  #register-btn {
-    background-color: #28a745; /* Bootstrap green */
+  .top-right-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #28a745;
     color: white;
-    font-size: 24px;
-    padding: 15px 40px;
-    border: none;
+    font-size: 18px;
+    padding: 12px 25px;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
     transition: background 0.3s;
 }
 
+.top-right-button:hover {
+    background-color: #218838;
+}

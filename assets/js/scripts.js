@@ -5,15 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeToggle = document.getElementById('theme-toggle');
     const filterButton = document.getElementById('filter-button');
 
-    // Event Listener: Form Submission
-    /*if (registrationForm) {
-        registrationForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const formData = new FormData(registrationForm);
-            submitRegistration(formData);
-        });
-    }*/
-
     // Event Listener: Hire Request Buttons
     if (hireRequestButtons) {
         hireRequestButtons.forEach(button => {
@@ -47,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Function: Submit Registration Form
 function submitRegistration(formData) {
-    // Remove resume field if empty
+   
     if (!formData.get('resume')) {
         formData.delete('resume');
     }
@@ -95,7 +86,6 @@ function sendHireRequest(talentId) {
 function loadParticipants() {
     const participantsList = document.getElementById('participants-list');
 
-    // Check if the participants list exists in the DOM
     if (!participantsList) {
         console.warn("Participants list element not found in the DOM.");
         return;
@@ -109,7 +99,7 @@ function loadParticipants() {
             return response.json();
         })
         .then(data => {
-            participantsList.innerHTML = ''; // Clear the list
+            participantsList.innerHTML = '';
             if (data.length === 0) {
                 participantsList.textContent = "No participants found.";
                 return;
@@ -122,13 +112,12 @@ function loadParticipants() {
         })
         .catch(error => {
             console.error('Error loading participants:', error);
-            participantsList.innerHTML = ''; // Clear the list
+            participantsList.innerHTML = ''; 
             participantsList.textContent = "Unable to load participants. Please try again later.";
         });
 }
 
 
-// Function: Load Languages
 function loadLanguages() {
     const languages = [
         'JavaScript', 'Python', 'Java', 'C#', 'C++', 'Ruby', 'Go', 'Swift', 'Kotlin',

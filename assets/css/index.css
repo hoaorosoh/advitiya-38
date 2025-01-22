@@ -1,20 +1,14 @@
-/* Light Theme */
+
 :root {
   --background-color: #000000;
   --text-color: #ffffff;
   --transition-duration: 0.5s;
 }
 
-/* Dark Theme */
-[data-theme="dark"] {
-  --background-color: #000000;
-  --text-color: #ffffff;
-}
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 5%;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color var(--transition-duration), color var(--transition-duration);
@@ -46,7 +40,7 @@ h1 {
 }
 
 h2 {
-    color: #35424a;
+    color:  #28a745a;
 }
 
 button {
@@ -115,4 +109,15 @@ input[type="submit"]:hover {
     .container {
         width: 100%;
     }
+}
+
+.button {
+  display: inline-block;
+  background-color: #28a745; /* Green */
+  color: white;
+  font-size: 18px;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
