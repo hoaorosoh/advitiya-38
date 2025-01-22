@@ -5,7 +5,7 @@ HaIII sharks!! ^-^
 This is our (data-38's) submission for the adivitiya hackathon.
 It is a **Talent Module** for JPD Hub
 <hr>
-### It has the following features-
+## It has the following features-
 - Talent Registration
 - Browsing Talent
 - Client Registration
